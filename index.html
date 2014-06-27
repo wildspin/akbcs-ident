@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="themes/akbpstheme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+
+
+
+
+  <script src="plugins/plugin-loader.js"></script>
+    <link rel="stylesheet" href="plugins/plugin-loader.css">
+<!--
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+ -->
+ <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<link href="akbcsapp.css" rel="stylesheet" type="text/css">
+
+
+    <script>
+        // Set virtual screen width size to 640 pixels
+        monaca.viewport({width: 340});
+    </script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="logmein">
+		<div data-role="header" data-position="inline">
+			<h2></h2>
+		</div>
+		<div data-role="content" data-theme="a">
+        <div style="width: 100%;text-align: center"><img src="image/logo.png"></div>
+			<p>ログインしてください</p>
+<input type="number" name="myid" placeholder="ID(例：AKBxxxx）" data-theme="c" >
+<input type="password" name="pwd" placeholder="パスワード" data-theme="c">
+<p style="margin: 0">端末にパスワードを保存:</p>
+    <div data-role="fieldcontain" width="100%">
+      <select name="slider" id="slider" data-role="slider">
+        <option value="off">しない</option>
+        <option value="on">する</option>
+      </select> 
+    </div>
+
+<a href="#" data-role="button" id="golog" onClick="$('#logerrdlog').fadeIn('fast');">ログイン</a>
+<a href="https://akb48cspassport.com/password/new" data-theme="c">◎パスワード忘れた？</a>
+<br>
+または<a href="https://akb48cspassport.com/registration/sign_up" data-role="button">新規登録</a>
+		</div>
+                <div id="logerrdlog" data-theme="e">
+        IDまたはパスワードが違います。もう一度入力してください
+        <a href="#" data-role="button" onClick="$('#logerrdlog').fadeOut('fast');">OK</a>
+        </div>
+	</div>
+
+
+</body>
+</html>

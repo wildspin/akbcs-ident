@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/akbpstheme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+<!--
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+メモ：
+monacaの仕様が変わってjqueryとjquery-mobileを一緒に外部から読むと依存でおかしくなる
+仕方ないのでplug-inでjqueryの新しいバージョンだけ呼んで、j-query-mobileとthemeは自前で呼ぶことで解決
+-->
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/akbcsapp.css" />
+
+    <script>
+    </script>
+    <script>
+        // Set virtual screen width size to 640 pixels
+        monaca.viewport({width: 340});
+    </script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="logmein">
+    	<div data-role="header" data-position="inline">
+			<h2></h2>
+		</div>
+		<div data-role="content" data-theme="a">
+        <div style="width: 100%;text-align: center"><img src="image/logo.png"></div>
+			<p>ログインしてください</p>
+<input type="number" name="myid" placeholder="ID(例：AKBxxxx）" data-theme="c" >
+<input type="password" name="pwd" placeholder="パスワード" data-theme="c">
+<p style="margin: 0">端末にパスワードを保存:</p>
+    <div data-role="fieldcontain" width="100%">
+      <select name="slider" id="slider" data-role="slider">
+        <option value="off">しない</option>
+        <option value="on">する</option>
+      </select> 
+    </div>
+
+<a href="#" data-role="button" id="golog" onClick="$('#logerrdlog').fadeIn('fast');">ログイン</a>
+<a href="#profile" data-theme="c">◎パスワード忘れた？</a>
+<br>
+または<a href="https://akb48cspassport.com/registration/sign_up" data-role="button">新規登録</a>
+		</div>
+                <div id="logerrdlog" data-theme="e">
+        IDまたはパスワードが違います。もう一度入力してください
+        <a href="#" data-role="button" onClick="$('#logerrdlog').fadeOut('fast');">OK</a>
+        </div>
+	</div>
+    <div data-role="page" id="profile">
+      <div data-role="content">
+      <div id="names">
+      <ruby><rb>藤本</rb><rp>（</rp><rt>ふじもと</rt><rp>）</rp></ruby> 
+      <ruby><rb>太郎喜左衛門将時能</rb><rp>（</rp><rt>たろうきざえもんのしょうときよし</rt><rp>）</rp></ruby>
+      </div>
+      <div id="addressdisp">
+      <p>埼玉県さいたま市浦和区</p><p>上木崎７−１５−２２</p>
+      </div>
+      </div>
+      <div data-role="footer">
+        <h4>フッター</h4>
+      </div>
+    </div>
+
+
+</body>
+</html>
